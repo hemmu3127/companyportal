@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Directory Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Company Directory Portal</h2>
+    <div class="box">
+        <section class="reg-form">
+            <h2>Employee Registration Form</h2>
+
+            <form id="emp-form">
+                <div class="fields">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+    
+                <div class="fields">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                        
+                <div class="fields">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                    </select>
+                </div>
+    
+                <div class="fields">
+                    <label for="employeeid">Employee ID</label>
+                    <input type="number" id="employeeid" name="employeeid" required>
+                </div>
+    
+                <div class="fields">
+                    <label for="profile"> Profile Picture</label>
+                    <input type="url" id="profile" name="profile" required>
+                </div>
+    
+                <button type="submit">Register Employee</button>
+    
+            </form>
+        </section>
+
+        <section class="reg-list">
+            <h2>Employee List</h2>
+            <div class="list">
+                <ol class="emp-list">
+                    <li><a href="#">Hems - hems12@gmail.com</a></li>
+                    <hr>
+                    <li><a href="#">Hari - hari53@gmail.com</a></li>
+                    <hr>
+                </ol>
+            </div>
+
+        </section>
+       
+        <section class="reg-details">
+            <h2>Employee Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Profile Picture</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Hemachandiran</td>
+                        <td>9245134</td>
+                        <td>IT</td>
+                        <td><img src="data:image/png;base64,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" alt="Hemachandiran"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Harini</td>
+                        <td>9245155</td>
+                        <td>Marketing</td>
+                        <td><img src="data:image/png;base64,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" alt="HARINI"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="reg-location">
+            <h2>Company Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.198607463809!2d78.38998950000001!3d17.4980302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e0!3m2!1sen!2sin!4v1727291633758!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+    </div>
+    
+</body>
+</html>
